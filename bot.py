@@ -88,7 +88,7 @@ async def generate_image(message: types.Message, state: FSMContext):
 @dp.callback_query_handler(lambda c: c.data in ['buttonDOXS'])
 async def process_callback_button(callback_query: types.CallbackQuery):
     if callback_query.data == 'buttonDOXS':
-         documentation_link = ""  # замените ссылку на фактическую документацию
+         documentation_link = "https://github.com/Soffiaa2008/Finalny_proekt.git"  # замените ссылку на фактическую документацию
          await bot.send_message(callback_query.from_user.id, f"Документация данного бота: {documentation_link}")
 
 @dp.callback_query_handler(lambda c: c.data in ['button2'])
